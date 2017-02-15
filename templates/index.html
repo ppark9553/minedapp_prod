@@ -39,6 +39,46 @@
 
     <script type="text/javascript" src="static/js/modernizr.custom.js"></script>
 
+    <style>
+      .panel {
+          border: 1px solid #c59a6d; 
+          border-radius:0 !important;
+          transition: box-shadow 0.5s;
+      }
+      .panel:hover {
+          box-shadow: 5px 0px 40px rgba(0,0,0, .4);
+      }
+      .panel-footer .btn:hover {
+          border: 1px solid #c59a6d;
+          background-color: #fff !important;
+          color: #1E2429;
+      }
+      .panel-heading {
+          color: #fff !important;
+          background-color: #1E2429 !important;
+          padding: 25px;
+          border-bottom: 1px solid transparent;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+      }
+      .panel-footer {
+          background-color: white !important;
+      }
+      .panel-footer h3 {
+          font-size: 32px;
+      }
+      .panel-footer h4 {
+          color: #aaa;
+          font-size: 14px;
+      }
+      .panel-footer .btn {
+          margin: 15px 0;
+          background-color: #1E2429;
+          color: #fff;
+      }
+    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -137,8 +177,8 @@
                 <div class="col-md-4 col-sm-4">
                     <div class="service">
                         <span class="fa fa-book fa-3x"></span>
-                        <h4>Data</h4>
-                        <p>We have all the KOSPI and KOSDAQ, and other global equities data that you need in order to develop a working strategy.</p>
+                        <h4>Data Collection</h4>
+                        <p>We have all the KOSPI and KOSDAQ, and other global equities data that you need in order to develop a working strategy on the spot.</p>
                     </div>
                 </div>
 
@@ -185,64 +225,73 @@
             </div>
             <div class="space"></div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 nopadding">
-                    <div class="portfolio-item">
-                        <div class="hover-bg">
-                            <a href="#">
-                                <div class="hover-text">
-                                    <h5>Momentum</h5>
-                                    <p class="lead">Dual Momentum Strategy</p>
-                                    <div class="hline"></div>
-                                </div>
-                                <img src="img/portfolio/01.jpg" class="img-responsive" alt="...">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 nopadding">
-                    <div class="portfolio-item">
-                        <div class="hover-bg">
-                            <a href="#">
-                                <div class="hover-text">
-                                    <h5>Risk</h5>
-                                    <p class="lead">Risk Parity Strategy</p>
-                                    <div class="hline"></div>
-                                </div>
-                                <img src="img/portfolio/02.jpg" class="img-responsive" alt="...">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 nopadding">
-                    <div class="portfolio-item">
-                        <div class="hover-bg">
-                            <a href="#">
-                                <div class="hover-text">
-                                    <h5>Correlation</h5>
-                                    <p class="lead">Elastic Asset Allocation Strategy</p>
-                                    <div class="hline"></div>
-                                </div>
-                            </a>
-                            <img src="img/portfolio/03.jpg" class="img-responsive" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 nopadding">
-                    <div class="portfolio-item">
-                        <div class="hover-bg">
-                            <a href="#">
-                                <div class="hover-text">
-                                    <h5>Swing Trade</h5>
-                                    <p class="lead">Supply and Demand Based Swing Strategy</p>
-                                    <div class="hline"></div>
-                                </div>
-                            </a>
-                            <img src="img/portfolio/04.jpg" class="img-responsive" alt="...">
-                        </div>
-                    </div>
-                </div>
+        <!-- Container (Pricing Section) -->
+        <div id="pricing" class="container-fluid">
+            <div class="row slideanim">
+              <div class="col-sm-3 col-xs-12">
+                <div class="panel panel-default text-center">
+                  <div class="panel-heading">
+                    <h2>Momentum</h2>
+                  </div>
+                  <div class="panel-body">
+                    <p><strong>Dual Momentum Strategy</strong></p>
+                    <p>Stocks that have increasing returns will likely perform better in the future. We select those with the best performance.</p>
+                  </div>
+                  <div class="panel-footer">
+                    <h3>+ 5%</h3>
+                    <h4>MDD: - 2%</h4>
+                    <button class="btn btn-lg">Learn more</button>
+                  </div>
+                </div>      
+              </div>     
+              <div class="col-sm-3 col-xs-12">
+                <div class="panel panel-default text-center">
+                  <div class="panel-heading">
+                    <h2>Volatility</h2>
+                  </div>
+                  <div class="panel-body">
+                    <p><strong>Risk Parity Strategy</strong></p>
+                    <p>Stocks with the lowest volatility will essentially perform better in the very long run. We select the safest stocks.</p>
+                  </div>
+                  <div class="panel-footer">
+                    <h3>+ 5%</h3>
+                    <h4>MDD: - 2%</h4>
+                    <button class="btn btn-lg">Learn more</button>
+                  </div>
+                </div>      
+              </div>
+              <div class="col-sm-3 col-xs-12">
+                <div class="panel panel-default text-center">
+                  <div class="panel-heading">
+                    <h2>Correlation</h2>
+                  </div>
+                  <div class="panel-body">
+                    <p><strong>Elastic Asset Allcation Strategy</strong></p>
+                    <p>A true diversification happens when assets are invested globally. We look at all assets in this world and make our investment.</p>
+                  </div>
+                  <div class="panel-footer">
+                    <h3>+ 5%</h3>
+                    <h4>MDD: - 2%</h4>
+                    <button class="btn btn-lg">Learn more</button>
+                  </div>
+                </div>      
+              </div>
+              <div class="col-sm-3 col-xs-12">
+                <div class="panel panel-default text-center">
+                  <div class="panel-heading">
+                    <h2>Swing</h2>
+                  </div>
+                  <div class="panel-body">
+                    <p><strong>Supply and Demand Based Swing Trade</strong></p>
+                    <p>Supply and demand is the true driving force behind stock prices. We follow stocks with the highest demand and invest in them.</p>
+                  </div>
+                  <div class="panel-footer">
+                    <h3>+ 5%</h3>
+                    <h4>MDD: - 2%</h4>
+                    <button class="btn btn-lg">Learn more</button>
+                  </div>
+                </div>      
+              </div>    
             </div>
         </div>
         <div class="space"></div>
@@ -286,9 +335,9 @@
             </div>
             <div class="space"></div>
             <div class="row">
-                <div class="col-md-10 col-sm-10">
+                <div class="col-md-9 col-sm-9">
                     <div class="row">
-                        <div class="col-md-4 col-sm-4">
+                        <div class="col-md-6 col-sm-6">
                             <div class="team">
                                 <img src="static/img/profile1.jpg" class="img-responsive img-circle" alt="...">
                                 <br>
@@ -298,7 +347,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-4">
+                        <div class="col-md-6 col-sm-6">
                             <div class="team">
                                 <img src="static/img/profile2.jpg" class="img-responsive img-circle" alt="...">
                                 <br>
@@ -308,20 +357,10 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-4">
-                            <div class="team">
-                                <img src="img/team/03.jpg" class="img-responsive img-circle" alt="...">
-                                <br>
-                                <h4></h4>
-                                <p class="small"></p>
-                                <hr>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-3 col-sm-3">
                     <div class="team hire">
                         <h4>Let's work together!</h4>
                         <hr>
